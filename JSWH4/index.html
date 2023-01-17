@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // 1
+        // Необходимо с помощью цикла for вывести следующие 11 строк в консоль:
+        // 0 – это ноль
+        // 1 – нечетное число
+        // 2 – четное число
+        // 3 – нечетное число
+        // …
+        // 10 – четное число
+
+
+        // for (let i = 0; i < 11; i++) {
+        //     if (i == 0) console.log((i) + " – это ноль");
+        //     else if (i % 2 == 0) console.log((i) + " – четное число");
+        //     else (console.log((i) + " – нечетное число"));
+
+        // }
+
+        // 2
+        // Дан массив [1, 2, 3, 4, 5, 6, 7]
+
+        // Сделайте из этого массива следующий [1, 2, 3, 6, 7]
+
+        // const arr = [1, 2, 3, 4, 5, 6, 7];
+        // const arr2 = arr.slice(0, 3)
+        // const arr3 = arr.slice(5, 7);
+        // const arr4 = [...arr2, ...arr3];
+        // console.log(arr4);
+
+
+
+
+        // 3
+        // Используя Math.random() вам необходимо генерировать цифры от 0 до 9,
+        //  и создать массив состоящий из 5 таких элементов
+        // 1. Рассчитать сумму элементов этого массива
+        // 2. Найти минимальное число
+        // 3. Найти есть ли в этом массиве число 3
+
+
+        const arr = [0, 0, 0, 0, 0];
+        function GetRandomArray(array) {
+            for (let i = 0; i < array.length; i++) {
+                array[i] = Math.floor(Math.random() * 9);
+
+            }
+            return array;
+        }
+        const arr2 = GetRandomArray(arr);
+        console.log(arr2);
+
+        // let sum = 0;
+        // for (let i = 0; i < arr2.length; i++) {
+        //     sum = arr2[i] + sum;
+        // }
+        // console.log(sum);
+
+        // let min = 10;
+        // for (let i = 0; i < arr2.length; i++) {
+        //     if (min > arr2[i]) min = arr2[i];
+        // }
+
+        // console.log(min);
+
+
+
+        if (arr2.includes(3)) console.log("Есть");
+        else console.log("Нет");
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
